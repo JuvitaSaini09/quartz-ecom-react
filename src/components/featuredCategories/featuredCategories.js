@@ -12,12 +12,12 @@ function FeaturedCategories() {
   <section className="feature-categories">
     <div className="feat-heading"> <h2>Featured Categories</h2></div>
     <div className="feature-container">
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={atomicHabits} />
+              <img className="card-image" alt="card" src={atomicHabits} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Atomic Habits</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -36,12 +36,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={ikigai} />
+              <img className="card-image" alt="card" src={ikigai} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Ikigai</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -60,12 +60,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={alchemist} />
+              <img className="card-image" alt="card" src={alchemist} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Alchemist</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -84,12 +84,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={fiveAmClub} />
+              <img className="card-image" alt="card" src={fiveAmClub} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Atomic Habits</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -113,12 +113,12 @@ function FeaturedCategories() {
   <section className="feature-categories">
     <div className="feat-heading"> <h2>New arrivals</h2></div>
     <div className="feature-container">
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={atomicHabits} />
+              <img className="card-image" alt="card" src={atomicHabits} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Atomic Habits</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -137,12 +137,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={ikigai} />
+              <img className="card-image" alt="card" src={ikigai} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Ikigai</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -161,12 +161,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={alchemist} />
+              <img className="card-image" alt="carde" src={alchemist} />
               <div className="card-text card6-text">
                 <header>
                   <h3>Alchemist</h3><button className="rate-btn"><span>★</span>4.5</button>
@@ -185,12 +185,12 @@ function FeaturedCategories() {
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="https://github.com/JuvitaSaini09/">
         <div className="card-featured">
           <div className="card6 card">
             <div className="card-badge">
               <button className="heart-badge "><span className="heart">♡</span></button>
-              <img className="card-image" alt="card-image" src={fiveAmClub} />
+              <img className="card-image" alt="card" src={fiveAmClub} />
               <div className="card-text card6-text">
                 <header>
                   <h3>5AM Club</h3><button className="rate-btn"><span>★</span>4.5</button>
