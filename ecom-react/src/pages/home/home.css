@@ -1,0 +1,245 @@
+/* @import url(/components/color.css); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url(https://build-ui-component-library.netlify.app/components/components.css);
+
+
+.logo{
+    cursor: pointer;
+    color:var(--pink-primary1);
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.logo h1 i{
+    padding-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+ .header-nav {
+background-color: var(--pink-light2);
+
+}
+.header-nav{
+    position: fixed;
+    z-index:555;
+    top:0;
+    width:100%;
+    box-shadow: 0px 15px 10px -15px var(--black);  
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    height:7rem;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.nav li a{
+    font-size: 1.5rem;
+    color:var(--pink-primary2);
+    padding:5px;
+    letter-spacing:1px;
+    border-radius: 5px;
+}
+
+.nav li a:hover{
+   background-color: var(--pink-light1);
+}
+
+
+.img-landing-page img{
+    height:30rem;
+    width:100%;
+}
+
+.landing-text{
+    z-index:2;
+    position:absolute;
+    top:12rem;
+    left:15%;
+    font-size:2rem;
+}
+
+.landing-text h2{
+  color:var(--pink-primary2)
+}
+
+.landing-text p{
+    margin-bottom:1rem;
+    color:var(--black-light);
+}
+
+.btn-explore{
+    border:1px solid var(--pink-dark);
+    border-radius: 5px;
+    font-size:1rem;
+  color:white;
+  padding:10px;
+  background-color: var(--pink-primary1);
+}
+.btn-explore:hover{
+    background-color: var(--pink-dark);
+}
+
+.text-landing-page >*{
+    margin:1rem;
+}
+/* just for now later ,understand the link problem */          
+footer{
+    color:var(--white);
+    text-align: center;
+    background-color:var(--pink-primary1);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/*-----------*/
+.feat-heading{
+    margin:auto;
+   width:20rem;
+}
+.feature-categories h2{
+    font-size: 2rem;
+    text-align: center;
+    border-bottom:5px solid var(--pink-primary2);
+    letter-spacing: 1px;
+    margin-bottom:2rem;
+    padding-bottom:1rem;
+}
+
+
+.feature-categories{
+    margin:3rem 5rem;
+}
+.feature-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:2rem;
+}
+
+.card-featured,.card6{
+    width:16rem;
+}
+
+.card-image{
+    margin:auto;
+    height: 14rem;
+    width: 12.5rem;
+    margin-left:1rem;
+}
+
+.footer-home{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.feature-container a{
+    color:black;
+}
+
+.btn-cart{
+    font-size:1.5rem;
+    width:100%;
+    height:100%;
+    color:white;
+    cursor:pointer;
+    background-color: var(--pink-primary1);
+    border:none;
+    margin-left:0;
+}
+.btn-cart:hover{
+    background-color: var(--pink-primary1);
+}
+
+@media only screen and (max-width:1300px){
+    .feature-container{
+        column-gap: 11rem;
+    }
+}
+
+@media only screen and (max-width:950px) {
+
+    .nav li a{
+        font-size: 1.3rem;
+    }
+ .landing-text{
+    top:15rem;
+    font-size:1.3rem;
+ }
+ .img-landing-page img{
+    height:30rem;
+    width:100%;
+}
+.card-featured,.card6{
+    width:20rem;
+    height:auto;
+}
+
+.card-image{
+    height: 16rem;
+    width: 14rem;
+    margin-left:3rem;
+}
+
+.feature-container{
+    column-gap: 2rem;
+}
+
+}
+
+@media only screen and (max-width:700px) {
+     
+    .nav li a{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font-size: 1.3rem;
+        padding-left: 0;
+    }
+
+    .nav li {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav ul{
+        position: absolute;
+        top: 3rem;
+        left:0;
+        right:0;
+        background-color: var(--pink-primary2);
+    }
+    .nav li a{
+        color:var(--white);
+        padding:5px;
+        width:100%;
+    }
+    .nav li a:hover{
+   background-color: var(--pink-primary3);
+    }
+    .navbar {
+        height:auto;
+    }
+
+    .footer-home{
+        font-size: 1rem;
+    }
+
+}
