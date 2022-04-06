@@ -7,16 +7,20 @@ import { useEffect, useState } from 'react';
 function FeaturedCategories() {
   const [data,setData]=useState([]);
 
-const fetchData=async() => {
-    try {
-      const response = await axios.get("/api/products");
-      setData(response.data.products)
-  }catch(e) {
-      console.error(e);
-  }
-  }
+  useEffect(() => {
+    async function fetchData() {
+      try{
+        const response = await axios.get("/api/products");
+        setData(response.data.products)
+      }
+      catch(e){
+        console.error(e);
+      }  
+    }
+    fetchData();
+  }, []);
 
-  fetchData();
+
 
   const featuredProducts=[...data].filter(item=>{
     return  (item.title==="Atomic Habits"||item.title==="The 5 Am Club"||item.title==="The House Of Strangers Stories"||item.title==="The Alchemist")
