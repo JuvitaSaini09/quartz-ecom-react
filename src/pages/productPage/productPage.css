@@ -1,0 +1,170 @@
+
+:root{
+    --white-less:rgb(253, 249, 249);
+}
+
+.main-body{
+    margin-top:7rem;
+}
+.header-nav{
+    position: fixed;
+    z-index:555;
+    top:0;
+    width:100%;
+    box-shadow: 0px 15px 10px -15px var(--black);  
+
+}
+
+.product-page{
+    display:flex;
+    flex-wrap:wrap;
+    gap:3rem;
+    position: absolute;
+    top:6rem;
+    justify-content: center;
+    margin-left:23rem;
+   
+}
+
+.side-drawer{
+    /*position: fixed; */
+    background-color: var(--white-less);
+    height:100%;
+    font-size:14px;
+    left:0;
+    transition:all 0.5s ease; 
+    width:fit-content;
+}
+
+.side-drawer-container{
+    margin-top:0rem;
+    margin-left:0rem;
+}
+
+.heading-side-drawer{
+    display:flex;
+  gap:5rem;
+}
+
+.btn-clear{
+    width:5rem;
+    font-size:1rem;
+    border:none;
+    border-bottom:3px solid var(--pink-primary2);
+    color:var(--pink-sec1);
+
+}
+.btn-clear:hover{
+    background-color: var(--pink-light2);
+}
+input[type=radio], input[type=checkbox]{
+    border: 0px;
+    width:1rem;
+    height: 1rem;
+    margin-left:1rem;
+}
+
+.side-drawer h1{
+    color:var(--pink-sec1);
+}
+
+.side-drawer h2{
+    font-size:1.3rem;
+    border-top:2px solid var(--grey-light);
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding-top:10px;
+    color:var(--black-light);
+}
+
+.side-drawer-container:only-child{
+    border:2px solid var(--grey-light);
+    padding:2rem;
+}
+
+.footer-home{
+    margin-top:3rem;
+    position: absolute;
+    width: 100%;
+    top:120rem;
+}
+
+.rating-value{
+    font-weight:bold;
+    margin-left:5rem;
+    color:var(--pink-primary2)
+}
+
+.btn-sidebar{
+    color:var(--white);
+    background-color: var(--pink-primary3);
+    position: fixed;
+    z-index:555;
+    padding:5px;
+    border:none;
+    border-radius:5px;
+    display:none;
+    top:8rem;
+    left:0rem;
+}
+
+.btn-sidebar:hover{
+    background-color:var(--pink-primary1);
+}
+
+.filter{
+
+    padding-left:10px;
+    font-size:1.2rem;
+}
+
+.card-featured .fa-heart{
+    color:rgb(146, 143, 143);
+    cursor:pointer;
+}
+.card-featured .fa-heart:hover{
+    color:rgb(114, 112, 112);
+    cursor:pointer;
+}
+
+@media only screen and (max-width:700px){
+    .main-body{
+        margin-top:7.2rem;
+    }
+
+    
+}
+
+
+@media only screen and (max-width:952px) {
+  
+    .side-drawer{
+      display:none;
+    }
+
+    .product-page{
+        margin-left:1rem;
+    }
+
+    .btn-sidebar{
+        display:block;
+    }
+
+    .card-featured,.card6{
+        width:16rem;
+        height:auto;
+    }
+    
+    .card-image{
+        height: 12rem;
+        width: 11rem;
+        margin-left:1rem;
+    }
+    
+    .product-page{
+        display:flex;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+    
+}
