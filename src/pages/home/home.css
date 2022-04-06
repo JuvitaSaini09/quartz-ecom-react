@@ -28,7 +28,7 @@ background-color: var(--pink-light2);
 }
 .header-nav{
     position: fixed;
-    z-index:555;
+    z-index:10;
     top:0;
     width:100%;
     box-shadow: 0px 15px 10px -15px var(--black);  
