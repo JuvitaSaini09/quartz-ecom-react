@@ -11,15 +11,15 @@ const Navbar=()=>{
     <nav className="nav">
       <ul className="nav-links">
 
-      <Link to="/"><li><a>HOME</a></li></Link>
+      <Link to="/"><li><a href="/">HOME</a></li></Link>
 
-    <Link to="/ProductPage"><li><a >PRODUCTS</a></li></Link>   
+    <Link to="/ProductPage"><li><a href="/" >PRODUCTS</a></li></Link>   
 
-    <Link to="/loginPage"><li><a >ACCOUNT</a></li></Link> 
+    <Link to="/loginPage"><li><a href="/">ACCOUNT</a></li></Link> 
 
-        <Link to="/wishlistPage">  <li><a > <i className="fas fa-heart" /></a></li></Link>
+        <Link to="/wishlistPage">  <li><a href="/"> <i className="fas fa-heart" /></a></li></Link>
 
-        <Link to="/cartPage"> <li><a ><i className="fas fa-shopping-bag" /></a></li> </Link>
+        <Link to="/cartPage"> <li><a href="/"><i className="fas fa-shopping-bag" /></a></li> </Link>
 
       </ul>
     </nav>
