@@ -12,8 +12,8 @@ body{
 :root{
   --white:white;
   --black :black ;
-  --black-light :rgb(37, 37, 37) ;
-  --grey-light:rgb(204, 195, 195) ;
+  --black-light :#252525 ;
+  --grey-light:#CCC3C3 ;
   --grey:grey ;
   --white:white ;
   --pink-dark:#a30b22 ;
