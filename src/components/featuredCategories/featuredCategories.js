@@ -6,14 +6,17 @@ import { useEffect, useState } from 'react';
 
 function FeaturedCategories() {
   const [data,setData]=useState([]);
-  useEffect(async () => {
+
+const fetchData=async() => {
     try {
       const response = await axios.get("/api/products");
       setData(response.data.products)
   }catch(e) {
       console.error(e);
   }
-  },[])
+  }
+
+  fetchData();
 
   const featuredProducts=[...data].filter(item=>{
     return  (item.title==="Atomic Habits"||item.title==="The 5 Am Club"||item.title==="The House Of Strangers Stories"||item.title==="The Alchemist")
@@ -33,7 +36,7 @@ function FeaturedCategories() {
 {
  featuredProducts.map(item=>{
     return(
-     <div className="card-featured">
+     <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
        <button className="heart-badge "><span ><i className="fas fa-heart fa-2x"></i></span></button>
@@ -71,7 +74,7 @@ function FeaturedCategories() {
     {
 newArrivalProducts.map(item=>{
     return(
-     <div className="card-featured">
+     <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
        <button className="heart-badge "><span ><i className="fas fa-heart fa-2x"></i></span></button>
