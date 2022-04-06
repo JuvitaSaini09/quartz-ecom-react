@@ -1,17 +1,7 @@
 import { v4 as uuid } from "uuid";
+import {atomicHabits,fiveAmClub,alchemist,doTheEpicShit,ikigai,thinkAndGrowRich,theFitnessCurrency,theHouseOfStrangeStories,HorrorsOfTheNight,mahabharata,unfinished,agniKiUdaan}
+from "../../images/allImages";
 
-import atomicHabits from "../../images/atomic-habits.jpg"
-import fiveAmClub from "../../images/5am-club.jpg"
-import alchemist from "../../images/alchemist.jpg"
-import doTheEpicShit from "../../images/do-the-epic-shit.jpg"
-import ikigai from "../../images/ikigai.jpg"
-import thinkAndGrowRich from "../../images/think-and-grow-rich.png"
-import theHouseOfStrangeStories from "../../images/TheHouseOfStrangeStories.jpg"
-import HorrorsOfTheNight from "../../images/HorrorsOfTheNight.jpg"
-import mahabharata  from "../../images/mahabharata.webp"
-import unfinished  from "../../images/Unfinished.webp"
-import agniKiUdaan from "../../images/agniKiUdaan.webp"
-import theFitnessCurrency from "../../images/theFitnessCurrency.webp"
 
 /**
  * Product Database can be added here.
