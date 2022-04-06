@@ -1,0 +1,31 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root{
+  --white:white;
+  --black :black ;
+  --black-light :#252525 ;
+  --grey-light:#CCC3C3 ;
+  --grey:grey ;
+  --white:white ;
+  --pink-dark:#a30b22 ;
+  --pink-primary1:#EC0023 ;
+  --pink-primary2:#DC1F3B ;
+  --pink-primary3:#f34d66 ;
+  --pink-sec1:#CC3E53 ;
+  --pink-sec2:#D55C70;
+  --pink-sec3:#DB7084;
+  --pink:#E18397;
+  --pink2:#EDADBE;
+  --pink-light1:#f5bbce;
+  --pink-light2:#F9D5E5;
+
+}
