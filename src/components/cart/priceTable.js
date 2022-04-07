@@ -28,11 +28,11 @@ function PriceTable() {
     //update bill
     setBill({ priceOfItems: sumOfItemsInCart, deliveryCharge: 50, totalPrice: 50 + sumOfItemsInCart, count: countOfItems })
   }, [state]);
-  console.log(bill)
+
 
   return (
     <>
-      {state[0] === undefined ? "" : <section className="col-2">
+      {!state.length === undefined ? "" : <section className="col-2">
         <div className="price-table">
           <table>
             <tbody><tr className="price-table-h">
