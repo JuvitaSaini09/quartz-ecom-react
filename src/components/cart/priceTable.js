@@ -32,7 +32,7 @@ function PriceTable() {
 
   return (
     <>
-      {!state.length === undefined ? "" : <section className="col-2">
+      {state[0]=== undefined ? "" : <section className="col-2">
         <div className="price-table">
           <table>
             <tbody><tr className="price-table-h">

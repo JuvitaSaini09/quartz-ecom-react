@@ -6,3 +6,4 @@ export {ProductListing} from "./productListing/productListing"
 export { Sidebar } from './sidebar/sidbar';
 export {CartItems} from "./cart/cartItems"
 export {PriceTable} from "./cart/priceTable"
+export {Wishlist} from "./wishlist/wishlist"
