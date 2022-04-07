@@ -1,10 +1,12 @@
 import React from 'react'
+import { useCart } from '../../context/cartContext/cartContext';
 import { useFilter } from '../../context/filterContext/filterContext'
 
 
 
 function ProductListing() {
   const { state } = useFilter();
+  const {dispatch}=useCart();
 
   return (
     <section className="product-page" style={{ marginTop: 3 + "rem" }}>
@@ -32,7 +34,7 @@ function ProductListing() {
                     </div>
                   </a>
                   <footer>
-                    <button className="btn-cart" >Add to cart</button>
+                    <button className="btn-cart" onClick={()=>{dispatch({type:"ADD_TO_CART",book:item})}}>Add to cart</button>
                   </footer>
                 </div>
               </div>

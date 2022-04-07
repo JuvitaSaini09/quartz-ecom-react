@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import img1 from "../../images/landing-img2.jpg"
 
 
@@ -12,7 +13,7 @@ function HeroSection() {
                 <section className="landing-text">
                     <h2>Read <br />The Best <br /> Books</h2>
                     <p>Learning is the way <br /> to get succeed.<br />Grow more with the books.</p>
-                    <a style={{ color: 'white' }} href="/components/product-page/product-page.html"> <button className="btn-explore">Explore | &gt;</button></a>
+                    <a style={{ color: 'white' }} href="/components/product-page/product-page.html"><Link to="/ProductPage"> <button className="btn-explore">Explore | &gt;</button></Link></a>
                 </section>
             </div>
         </>
