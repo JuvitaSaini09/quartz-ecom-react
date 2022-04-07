@@ -24,6 +24,3 @@ Quartz Book Store has following pages
    • Logout
 
 
-## Video ##
-
-https://user-images.githubusercontent.com/87228863/155097785-caa73908-6027-411d-bdab-9941b3265c2f.mp4
