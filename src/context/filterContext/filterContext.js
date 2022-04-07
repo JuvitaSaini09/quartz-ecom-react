@@ -253,6 +253,9 @@ import React, {
           }
   
           return newState3;
+
+          case "clearFilters":
+              return [...data];
   
   
         default:
