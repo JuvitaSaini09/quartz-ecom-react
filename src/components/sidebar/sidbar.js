@@ -21,8 +21,6 @@ function Sidebar() {
     const element = document.getElementsByClassName("slider");
     element[0].value = 5;
     setRating(5);
-
-    dispatch({ type: "clearFilters", currentRating: 5 })
   }
 
 
@@ -33,7 +31,8 @@ function Sidebar() {
           <div className="heading-side-drawer">
             <h1>Filters</h1>
             <button className="btn-clear" onClick={() => {
-              btnClearClickHandler()
+              btnClearClickHandler();
+              dispatch({ type: "clearFilters", currentRating: 5 })
             }}>clear</button>
           </div>
           <div className="slider-container">

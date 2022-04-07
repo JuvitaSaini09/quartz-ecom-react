@@ -6,7 +6,6 @@ function PriceFilter() {
     const {
         dispatch,
         setpriceRangeCheckedList,
-        priceRangeCheckedList
       } = useFilter();
 
     const priceRangeClickHandler = (e, itemName) => {
