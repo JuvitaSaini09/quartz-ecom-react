@@ -14,7 +14,6 @@ function CategoryFilter() {
             else return { ...obj, isTrue: false };
           } else return { ...obj };
         });
-        console.log(newCheckedList);
         return newCheckedList;
       });
      

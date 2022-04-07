@@ -1,9 +1,7 @@
 import React from 'react'
 import "../home/home.css";
-import { Footer, Navbar } from '../../components/allComponents';
+import { Footer, Navbar,ProductListing,Sidebar } from '../../components/allComponents';
 import "./productPage.css";
-import { ProductListing } from '../../components/productListing/productListing';
-import { Sidebar } from '../../components/sidebar/sidbar';
 
 
 function ProductPage() {
