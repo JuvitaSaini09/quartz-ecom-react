@@ -78,15 +78,19 @@ const FilterProvider = ({
             try {
                 const response = await axios.get("/api/products");
                 setData(response.data.products)
+                
             }
             catch (e) {
                 console.error(e);
             }
+            dispatch({
+                type: "ADD_FETCHED_DATA"
+            })
         }
         fetchData();
     }, []);
 
-
+    
 
     const [checkedList, setCheckedList] = useState(categoriesChecked);
     const [priceRangeCheckedList, setpriceRangeCheckedList] = useState(priceRangeData);
@@ -148,15 +152,14 @@ const FilterProvider = ({
 
 
     const filterByRating = (data, ratingValue) => {
-        console.log(data, ratingValue)
         const filteredArray = data.filter(book => book.rating <= ratingValue)
         return filteredArray;
     }
 
 
-
     //reducer function
     const filterReducer = (state, action) => {
+        console.log("filter Reducer")
         switch (action.type) {
             case "LOW_TO_HIGH":
                 setIsDataSorted({
@@ -260,15 +263,16 @@ const FilterProvider = ({
             case "clearFilters":
                 return [...data];
 
+                case "ADD_FETCHED_DATA" :
+                return [...data];
+
 
             default:
                 return [...state];
         }
     };
 
-    const [state, dispatch] = useReducer(filterReducer, data);
-
-
+     const [state, dispatch] = useReducer(filterReducer, [...data]);
     return (<filterContext.Provider value={
         {
             state,
