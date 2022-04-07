@@ -7,3 +7,6 @@ export { Sidebar } from './sidebar/sidbar';
 export {CartItems} from "./cart/cartItems"
 export {PriceTable} from "./cart/priceTable"
 export {Wishlist} from "./wishlist/wishlist"
+export {Login} from "./authentication/login/login"
+export {Logout} from "./authentication/logout/logout"
+export {Signup} from "./authentication/signup/signup"
