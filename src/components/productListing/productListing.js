@@ -5,6 +5,7 @@ import { useFilter } from '../../context/filterContext/filterContext'
 
 function ProductListing() {
   const { state } = useFilter();
+  
 
   return (
     <section className="product-page" style={{ marginTop: 3 + "rem" }}>
