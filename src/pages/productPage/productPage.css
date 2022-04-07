@@ -5,45 +5,42 @@
 
 .main-body{
     margin-top:7rem;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
 }
 .header-nav{
     position: fixed;
-    z-index:555;
+    z-index:2;
     top:0;
     width:100%;
     box-shadow: 0px 15px 10px -15px var(--black);  
-
 }
 
 .product-page{
-    display:flex;
-    flex-wrap:wrap;
-    gap:3rem;
-    position: absolute;
+     display:flex;
+     justify-content: center;
+     flex-wrap: wrap;
+    gap:1rem;
     top:6rem;
-    justify-content: center;
-    margin-left:23rem;
-   
 }
 
-.side-drawer{
+.side-drawer:only-child{
     /*position: fixed; */
     background-color: var(--white-less);
     height:100%;
     font-size:14px;
-    left:0;
-    transition:all 0.5s ease; 
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     width:fit-content;
 }
 
 .side-drawer-container{
-    margin-top:0rem;
-    margin-left:0rem;
+   text-align:left;
 }
 
 .heading-side-drawer{
     display:flex;
-  gap:5rem;
+    gap:3rem;
 }
 
 .btn-clear{
@@ -84,9 +81,7 @@ input[type=radio], input[type=checkbox]{
 
 .footer-home{
     margin-top:3rem;
-    position: absolute;
-    width: 100%;
-    top:120rem;
+    width: 100%;;
 }
 
 .rating-value{
@@ -99,7 +94,7 @@ input[type=radio], input[type=checkbox]{
     color:var(--white);
     background-color: var(--pink-primary3);
     position: fixed;
-    z-index:555;
+    z-index:10;
     padding:5px;
     border:none;
     border-radius:5px;
@@ -113,7 +108,6 @@ input[type=radio], input[type=checkbox]{
 }
 
 .filter{
-
     padding-left:10px;
     font-size:1.2rem;
 }
@@ -131,19 +125,20 @@ input[type=radio], input[type=checkbox]{
     .main-body{
         margin-top:7.2rem;
     }
+    .side-drawer{
+        opacity: 0 ;
+        display: none;
 
+    }
     
 }
 
 
 @media only screen and (max-width:952px) {
   
-    .side-drawer{
-      display:none;
-    }
 
     .product-page{
-        margin-left:1rem;
+        margin-left:5rem;
     }
 
     .btn-sidebar{
@@ -165,6 +160,10 @@ input[type=radio], input[type=checkbox]{
         display:flex;
         flex-wrap:wrap;
         gap:1rem;
+    }
+    .side-drawer-toggle{
+        display:block;
+        opacity:1 ;
     }
     
 }

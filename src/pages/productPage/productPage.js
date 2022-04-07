@@ -12,9 +12,6 @@ function ProductPage() {
   return (
     <>
       <Navbar />
-      <button className="btn-sidebar" >
-        <i className="fas fa-bars fa-2x" id="btn" />
-        <span className="filter">Filter</span></button>
 
       <main className="main-body">
         <Sidebar />

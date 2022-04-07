@@ -9,6 +9,11 @@ import { SortLhHl } from './sort-lh-hl';
 function Sidebar() {
   const { dispatch } = useFilter();
   const [rating, setRating] = useState(5)
+  const [toggleSideBar,setToggleSideBar]=useState(false);
+
+  const filterBar=()=>{
+    setToggleSideBar(prev=>!prev)
+  }
 
   const btnClearClickHandler = () => {
 
@@ -22,11 +27,13 @@ function Sidebar() {
     element[0].value = 5;
     setRating(5);
   }
-
-
+ 
   return (
     <>
-      <section className="side-drawer"   >
+     <button className="btn-sidebar" >
+        <i className="fas fa-bars fa-2x" id="btn" />
+        <span className="filter" onClick={()=>filterBar()}>Filter</span></button>
+      <section className={toggleSideBar ? "side-drawer-toggle side-drawer" : "side-drawer"}  >
         <div className="side-drawer-container" >
           <div className="heading-side-drawer">
             <h1>Filters</h1>

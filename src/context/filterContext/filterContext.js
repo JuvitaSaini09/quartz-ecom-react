@@ -85,6 +85,9 @@ const FilterProvider = ({
         }
         fetchData();
     }, []);
+
+
+
     const [checkedList, setCheckedList] = useState(categoriesChecked);
     const [priceRangeCheckedList, setpriceRangeCheckedList] = useState(priceRangeData);
     const [isDataSorted, setIsDataSorted] = useState({
