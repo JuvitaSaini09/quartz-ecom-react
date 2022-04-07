@@ -15,7 +15,7 @@ function Wishlist() {
       { 
         stateWishlist.map(item=>{
           return(
-            <div className="wishlist-card">
+            <div key={item._id} className="wishlist-card">
       <div className="card card5 card7">
         <section className="img-container">
           <img className="card-image" alt="card" src={item.src} />
