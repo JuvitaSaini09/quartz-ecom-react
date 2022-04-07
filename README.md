@@ -4,7 +4,7 @@ This folder contains the Mock Backend created for E-Commerce App. It contains di
 
 # quartz-store
 
-Quartz Book Store is a E-commerce website.It is made with Html and CSS.
+Quartz Book Store is a E-commerce website.It is made with React.
 
 ## Pages ##
 
