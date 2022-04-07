@@ -1,0 +1,19 @@
+
+
+.heading-my-wishlist{
+    margin-top:8rem;
+    color:var(--pink-primary1);
+    text-align:center;
+}
+
+.wishlist-card-container {
+    margin: 2rem 5rem 4rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart-click-btns,
+.text-container {
+    margin-top: 1rem;
+}

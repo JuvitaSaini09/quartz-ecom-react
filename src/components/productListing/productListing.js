@@ -1,12 +1,14 @@
 import React from 'react'
 import { useCart } from '../../context/cartContext/cartContext';
 import { useFilter } from '../../context/filterContext/filterContext'
+import { useWishlist } from '../../context/wishlistContext/wishlistContext';
 
 
 
 function ProductListing() {
   const { state } = useFilter();
   const {dispatch}=useCart();
+  const {dispatchWishList}=useWishlist();
 
   return (
     <section className="product-page" style={{ marginTop: 3 + "rem" }}>
@@ -15,10 +17,10 @@ function ProductListing() {
       {
         state.map((item) => {
           return (
-            <div className="card-featured">
+            <div key={item._id} className="card-featured">
               <div className="card6 card">
                 <div className="card-badge">
-                  <button className="heart-badge "><span><i className="fas fa-heart fa-2x"></i></span></button>
+                  <button className="heart-badge "><span onClick={()=>{dispatchWishList({type:"ADD_TO_WISHLIST",book:item})}}><i className="fas fa-heart fa-2x"></i></span></button>
                   <a href="/">
                     <img className="card-image" alt="card" src={item.src} />
                     <div className="card-text card6-text">

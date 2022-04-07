@@ -1,11 +1,14 @@
 import React from 'react'
 import { useCart } from '../../context/cartContext/cartContext';
+import { useWishlist } from '../../context/wishlistContext/wishlistContext';
 
 
 
 function CartItems() {
 
  const {state,dispatch}=useCart();
+ const {dispatchWishList }=useWishlist();
+
   return (
     <>
       <section className="col-1"> 
@@ -14,7 +17,7 @@ function CartItems() {
          state.map(item=>{
            return(
              <>
-             <div className="cart-item"> 
+             <div key={item._id} className="cart-item"> 
   <div className="card card5 card7">
       <section className="img-container">
         <img className="card-image" alt="card" src={item.src} />
@@ -33,7 +36,7 @@ function CartItems() {
         </div>
         <div className="cart-click-btns">  
           <button className="btn-cart" onClick={()=>{dispatch({type:"REMOVE_FROM_CART",book:item})}}>Remove from cart</button><br />
-          <button className="btn-cart" >Add to wishlist</button>
+          <button className="btn-cart"  onClick={()=>{dispatchWishList({type:"ADD_TO_WISHLIST",book:item})}}>Add to wishlist</button>
         </div> 
         <div className="cart-quantity-btns">
           <button className="cart-quantity" onClick={()=>{dispatch({type:"DECREMENT_COUNT",book:item})}}>-</button>

@@ -2,12 +2,14 @@ import React from 'react'
 import axios from "axios"
 import { useEffect, useState } from 'react';
 import { useCart } from '../../context/cartContext/cartContext';
+import { useWishlist } from '../../context/wishlistContext/wishlistContext';
 
 
 
 function FeaturedCategories() {
   const [data,setData]=useState([]);
   const { dispatch }=useCart();
+  const {dispatchWishList}=useWishlist();
 
   useEffect(() => {
     async function fetchData() {
@@ -45,7 +47,7 @@ function FeaturedCategories() {
      <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
-       <button className="heart-badge "><span ><i className="fas fa-heart fa-2x"></i></span></button>
+       <button className="heart-badge "><span onClick={()=>{dispatchWishList({type:"ADD_TO_WISHLIST",book:item})}}  ><i className="fas fa-heart fa-2x"></i></span></button>
        <a href="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">
@@ -83,7 +85,7 @@ newArrivalProducts.map(item=>{
      <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
-       <button className="heart-badge "><span ><i className="fas fa-heart fa-2x"></i></span></button>
+       <button className="heart-badge "><span onClick={()=>{dispatchWishList({type:"ADD_TO_WISHLIST",book:item})}} ><i className="fas fa-heart fa-2x"></i></span></button>
        <a href="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">
