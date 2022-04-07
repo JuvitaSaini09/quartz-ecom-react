@@ -1,10 +1,7 @@
 import { Route,Routes } from "react-router-dom";
 import React from 'react'
 import "./App.css";
-import { Home } from "./pages/home/home";
-import { ProductPage } from "./pages/productPage/productPage";
-import { CartPage } from "./pages/cartPage/cartPage";
-import { WishlistPage } from "./pages/wishlistPage/wishlistPage";
+import { Home ,ProductPage,CartPage,WishlistPage} from "./pages/index";
 
 function App() {
   return (
