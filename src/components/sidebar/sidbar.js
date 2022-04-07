@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import { useFilter } from "../../context/filterContext/filterContext"
 import { CategoryFilter } from './categoryFilter';
 import { PriceFilter } from './priceFilter';

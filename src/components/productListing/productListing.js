@@ -17,8 +17,8 @@ function ProductListing() {
               <div className="card6 card">
                 <div className="card-badge">
                   <button className="heart-badge "><span><i className="fas fa-heart fa-2x"></i></span></button>
-                  <a href="#">
-                    <img className="card-image" alt="card-image" src={item.src} />
+                  <a href="/">
+                    <img className="card-image" alt="card" src={item.src} />
                     <div className="card-text card6-text">
                       <header>
                         <h3>{item.title}</h3><button className="rate-btn"><span>★</span>{item.rating}</button>
