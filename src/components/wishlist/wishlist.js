@@ -6,7 +6,6 @@ function Wishlist() {
  const {dispatch}=useCart();
   const  {stateWishlist,dispatchWishList}=useWishlist();
   return (
-    <>
   <div>
   <h1 className="heading-my-wishlist">My Wishlist ❤</h1>
   <section className="wishlist-card-container">
@@ -48,7 +47,6 @@ function Wishlist() {
   </section>
 </div>
 
-    </>
   )
 }
 
