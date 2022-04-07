@@ -17,7 +17,7 @@ function CartItems() {
              <div className="cart-item"> 
   <div className="card card5 card7">
       <section className="img-container">
-        <img className="card-image" alt="card-image" src={item.src} />
+        <img className="card-image" alt="card" src={item.src} />
       </section>
       <section className="text-container">
         <div className="card-text card8-text">
