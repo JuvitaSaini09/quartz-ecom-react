@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
- import "../home/home.css";
+import "../home/home.css";
 import { Footer, Navbar } from '../../components/allComponents';
 import "./productPage.css";
 import { ProductListing } from '../../components/productListing/productListing';
@@ -11,20 +11,20 @@ function ProductPage() {
 
   return (
     <>
-    <Navbar />
- <button className="btn-sidebar" >
-   <i className="fas fa-bars fa-2x" id="btn" />
-   <span className="filter">Filter</span></button>
+      <Navbar />
+      <button className="btn-sidebar" >
+        <i className="fas fa-bars fa-2x" id="btn" />
+        <span className="filter">Filter</span></button>
 
- <main className="main-body">
-     <Sidebar />
-     <ProductListing />
+      <main className="main-body">
+        <Sidebar />
+        <ProductListing />
 
- </main>
+      </main>
 
-    <Footer />
+      <Footer />
     </>
   )
 }
 
-export {ProductPage};
+export { ProductPage };
