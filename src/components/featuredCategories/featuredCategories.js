@@ -1,11 +1,13 @@
 import React from 'react'
 import axios from "axios"
 import { useEffect, useState } from 'react';
+import { useCart } from '../../context/cartContext/cartContext';
 
 
 
 function FeaturedCategories() {
   const [data,setData]=useState([]);
+  const { dispatch }=useCart();
 
   useEffect(() => {
     async function fetchData() {
@@ -59,7 +61,7 @@ function FeaturedCategories() {
          </div>
        </a>
        <footer>
-         <button className="btn-cart" >Add to cart</button>
+         <button className="btn-cart" onClick={()=>{dispatch({type:"ADD_TO_CART",book:item})}}>Add to cart</button>
        </footer>
      </div>
    </div>
@@ -97,7 +99,7 @@ newArrivalProducts.map(item=>{
          </div>
        </a>
        <footer>
-         <button className="btn-cart" >Add to cart</button>
+         <button className="btn-cart" onClick={()=>{dispatch({type:"ADD_TO_CART",book:item})}}>Add to cart</button>
        </footer>
      </div>
    </div>
