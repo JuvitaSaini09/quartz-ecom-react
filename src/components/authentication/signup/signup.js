@@ -11,9 +11,9 @@ function Signup() {
     password: "",
   })
   
-  const signUpHandler=()=>{
+  const signUpHandler=(e)=>{
    if(newUser.email!==''  && newUser.password !== ''&& newUser.fname !== ''&& newUser.lname !== '')
-   signUp(newUser)
+   signUp(e,newUser)
    else console.log("Signup Error : input both fields")
   }
 
@@ -44,7 +44,7 @@ function Signup() {
     <input type="password" className="text-input" placeholder="Your password"   onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
             value={newUser.password} /><span className="login-icon"><i className="fas fa-eye" /></span>
   </div>
-  <div className="login-bottom" onClick={signUpHandler} ><button>Sign up</button>
+  <div className="login-bottom" onClick={e=>signUpHandler(e)} ><button>Sign up</button>
     <p>Already have an Account <Link to="/loginPage" style={{color:"blue"}}>Log In</Link></p>
   </div>
 </main>
