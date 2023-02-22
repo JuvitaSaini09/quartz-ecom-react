@@ -159,7 +159,6 @@ const FilterProvider = ({
 
     //reducer function
     const filterReducer = (state, action) => {
-        console.log("filter Reducer")
         switch (action.type) {
             case "LOW_TO_HIGH":
                 setIsDataSorted({
