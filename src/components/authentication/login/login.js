@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuthContext } from '../../../context/authContext/authContext';
 
 function Login() {
-
+  const {login}=useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
   const loginHandler=()=>{
    if(email!==''  && password !== '')
-   console.log(email,password)
+   login(email,password)
    else console.log("Error : input both fields")
   }
   return (
