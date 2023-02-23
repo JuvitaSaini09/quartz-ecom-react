@@ -32,7 +32,7 @@ function CartItems() {
         console.log(error);
       }
     })();
-  }, []);
+  }, [setCartItems]);
 
   const incrementQty = async (product) => {
     if (product.qty < 10) {
