@@ -15,7 +15,15 @@ const Navbar = () => {
 
               <Link to="/ProductPage"><li><a href="/" >PRODUCTS</a></li></Link>
 
-              <Link to="/loginPage"><li><a href="/">ACCOUNT</a></li></Link>
+              {
+                localStorage.getItem("token") 
+                ? <Link to="/logoutPage" onClick={()=>{
+                  localStorage.clear();
+                  
+                }}><li><a href="/components/product-page/login-page.html">LOGOUT</a></li></Link>
+                : <Link to="/loginPage"><li><a href="/">ACCOUNT</a></li></Link>
+                 
+              }
 
               <Link to="/wishlistPage">  <li><a href="/"> <i className="fas fa-heart" /></a></li></Link>
 
