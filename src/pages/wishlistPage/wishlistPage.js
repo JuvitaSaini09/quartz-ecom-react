@@ -1,10 +1,10 @@
 import React from 'react'
-import { Footer, NavbarLogout, Wishlist } from '../../components/allComponents'
+import { Footer, Navbar, Wishlist } from '../../components/allComponents'
 import "./wishlistPage.css"
 function WishlistPage() {
   return (
     <>
-    <NavbarLogout />
+    <Navbar />
     <Wishlist />
     <Footer />
     </>
