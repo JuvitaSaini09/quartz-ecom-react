@@ -1,26 +1,31 @@
 import axios from 'axios';
 import React,{createContext, useContext} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const authContext= createContext(null);
 
 const AuthProvider=({children})=>{
+  const navigate=useNavigate();
 
 
     const signUp = async (e,newUser) => {
         e.preventDefault();
         
         try {
-          const response = await axios.post(`/api/auth/signup`, {
+          const {data} = await axios.post(`/api/auth/signup`, {
              "firstName": newUser.fname,
              "lastName": newUser.lname,
              "email": newUser.email,
              "password": newUser.password,
            });
-          console.log(response.data.createdUser,response.data.encodedToken)
           // saving the encodedToken in the localStorage
-          localStorage.setItem("token", response.data.encodedToken);
+          localStorage.setItem("token",data.encodedToken);
+          // saving the user in the localStorage
+          localStorage.setItem("user",data.foundUser(data.createdUser));
+          //navigate to home page
+          navigate("/");
         } catch (error) {
-          console.log(error);
+          console.log("signup error",error);
         }
         
       };
@@ -31,9 +36,13 @@ const AuthProvider=({children})=>{
                 "email":email,
                 "password":password,
               });
-              console.log(data)
+              
               // saving the encodedToken in the localStorage
               localStorage.setItem("token",data.encodedToken);
+              // saving the user in the localStorage
+              localStorage.setItem("user",JSON.stringify(data.foundUser));
+              //navigate to home page
+              navigate("/");
             } catch (error) {
               console.log("login error",error);
             }
