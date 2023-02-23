@@ -21,7 +21,7 @@ const AuthProvider=({children})=>{
           // saving the encodedToken in the localStorage
           localStorage.setItem("token",data.encodedToken);
           // saving the user in the localStorage
-          localStorage.setItem("user",data.foundUser(data.createdUser));
+          localStorage.setItem("user",JSON.stringify(data.createdUser));
           //navigate to home page
           navigate("/");
         } catch (error) {
