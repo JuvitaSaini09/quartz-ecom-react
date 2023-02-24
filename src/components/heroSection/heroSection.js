@@ -13,7 +13,11 @@ function HeroSection() {
                 <section className="landing-text">
                     <h2>Read <br />The Best <br /> Books</h2>
                     <p>Learning is the way <br /> to get succeed.<br />Grow more with the books.</p>
-                    <a style={{ color: 'white' }} href="/components/product-page/product-page.html"><Link to="/ProductPage"> <button className="btn-explore">Explore | &gt;</button></Link></a>
+                    <div style={{ color: 'white' }} >
+                        <Link to="/ProductPage">
+                             <button className="btn-explore">Explore | &gt;</button>
+                        </Link>
+                    </div>
                 </section>
             </div>
         </>

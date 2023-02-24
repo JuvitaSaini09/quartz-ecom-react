@@ -14,9 +14,6 @@
     padding-right: 1rem;
 }
 
-a {
-    text-decoration: none;
-}
 
 ul {
     list-style: none;
@@ -48,7 +45,7 @@ background-color: var(--pink-light2);
     margin-right: 1rem;
 }
 
-.nav li a{
+.nav li div{
     font-size: 1.5rem;
     color:var(--pink-primary2);
     padding:5px;
@@ -56,7 +53,7 @@ background-color: var(--pink-light2);
     border-radius: 5px;
 }
 
-.nav li a:hover{
+.nav li div:hover{
    background-color: var(--pink-light1);
 }
 
@@ -175,7 +172,7 @@ footer{
 
 @media only screen and (max-width:950px) {
 
-    .nav li a{
+    .nav li div{
         font-size: 1.3rem;
     }
  .landing-text{
@@ -205,7 +202,7 @@ footer{
 
 @media only screen and (max-width:700px) {
      
-    .nav li a{
+    .nav li div{
         font-size: 1rem;
     }
 
@@ -226,12 +223,12 @@ footer{
         right:0;
         background-color: var(--pink-primary2);
     }
-    .nav li a{
+    .nav li div{
         color:var(--white);
         padding:5px;
         width:100%;
     }
-    .nav li a:hover{
+    .nav li div:hover{
    background-color: var(--pink-primary3);
     }
     .navbar {

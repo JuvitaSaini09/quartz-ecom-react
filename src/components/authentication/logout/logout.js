@@ -9,10 +9,10 @@ function Logout() {
     <h1>Log out Succesful !</h1>
     <div className="login-bottom">
     <Link to="/loginPage">
-      <a href="/components/authentication-page/login-page.html"> <button>Log In</button> </a>
+      <button>Log In</button> 
       </Link>
       <Link to="/">
-      <a href="/index.html"> <button>Home</button></a>
+      <button>Home</button>
       </Link >
     </div>
   </div></main> 

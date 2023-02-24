@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useCart } from "../../context/cartContext/cartContext";
 import { useFilter } from "../../context/filterContext/filterContext";
 import { useWishlist } from "../../context/wishlistContext/wishlistContext";
@@ -31,7 +32,7 @@ function ProductListing() {
                     <i className="fas fa-heart fa-2x"></i>
                   </span>
                 </button>
-                <a href="/">
+                <Link to="/">
                   <img className="card-image" alt="card" src={item.src} />
                   <div className="card-text card6-text">
                     <header>
@@ -51,7 +52,7 @@ function ProductListing() {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
                 <footer>
                   <button
                     className="btn-cart"

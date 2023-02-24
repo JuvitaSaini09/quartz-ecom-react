@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {createRoot} from 'react-dom/client' 
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
@@ -9,10 +9,12 @@ import { CartProvider } from "./context/cartContext/cartContext";
 import { WishlistProvider } from "./context/wishlistContext/wishlistContext";
 import {AuthProvider} from "./context/authContext/authContext"
 
+const container=document.getElementById('root');
+const root=createRoot(container);
 // Call make Server
 makeServer();
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
      <BrowserRouter>
      <AuthProvider>
@@ -26,5 +28,4 @@ ReactDOM.render(
     </AuthProvider>  
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
 );

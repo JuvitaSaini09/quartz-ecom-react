@@ -6,6 +6,7 @@ const cartContext = createContext(null);
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const encodedToken = localStorage.getItem("token");
+  axios.defaults.headers.common["authorization"] = encodedToken;
 
   const addItemToCart = async (product) => {
     const isItemAlreadyInCart = cartItems.find((cartItem) => {
@@ -19,10 +20,11 @@ const CartProvider = ({ children }) => {
           { product: product },
           {
             headers: {
-              authorization: encodedToken,
+              authorization: localStorage.getItem("token"),
             },
           }
         );
+        console.log("here is the response",response.data)
         setCartItems(response.data.cart);
       } catch (error) {
         if (error.response.status === 500) {
