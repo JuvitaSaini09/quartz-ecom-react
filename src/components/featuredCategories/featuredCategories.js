@@ -3,6 +3,7 @@ import axios from "axios"
 import { useEffect, useState } from 'react';
 import { useCart } from '../../context/cartContext/cartContext';
 import { useWishlist } from '../../context/wishlistContext/wishlistContext';
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,7 +49,7 @@ function FeaturedCategories() {
    <div className="card6 card">
      <div className="card-badge">
        <button className="heart-badge "><span onClick={()=>addToWishList(item)}  ><i className="fas fa-heart fa-2x"></i></span></button>
-       <a href="/">
+       <Link to="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">
            <header>
@@ -61,7 +62,7 @@ function FeaturedCategories() {
              </div>
            </div>
          </div>
-       </a>
+       </Link>
        <footer>
          <button className="btn-cart" onClick={()=>addItemToCart(item)}>Add to cart</button>
        </footer>
@@ -86,7 +87,7 @@ newArrivalProducts.map(item=>{
    <div className="card6 card">
      <div className="card-badge">
        <button className="heart-badge "><span onClick={()=>addToWishList(item)} ><i className="fas fa-heart fa-2x"></i></span></button>
-       <a href="/">
+       <Link to="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">
            <header>
@@ -99,7 +100,7 @@ newArrivalProducts.map(item=>{
              </div>
            </div>
          </div>
-       </a>
+       </Link>
        <footer>
          <button className="btn-cart" onClick={()=>addItemToCart(item)}>Add to cart</button>
        </footer>

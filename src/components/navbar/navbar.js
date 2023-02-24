@@ -11,23 +11,23 @@ const Navbar = () => {
           <nav className="nav">
             <ul className="nav-links">
 
-              <Link to="/"><li><a href="/">HOME</a></li></Link>
+              <Link to="/"><li><div>HOME</div></li></Link>
 
-              <Link to="/ProductPage"><li><a href="/" >PRODUCTS</a></li></Link>
+              <Link to="/ProductPage"><li><div href="/" >PRODUCTS</div></li></Link>
 
               {
                 localStorage.getItem("token") 
                 ? <Link to="/logoutPage" onClick={()=>{
                   localStorage.clear();
                   
-                }}><li><a href="/components/product-page/login-page.html">LOGOUT</a></li></Link>
-                : <Link to="/loginPage"><li><a href="/">ACCOUNT</a></li></Link>
+                }}><li><div href="/components/product-page/login-page.html">LOGOUT</div></li></Link>
+                : <Link to="/loginPage"><li><div href="/">ACCOUNT</div></li></Link>
                  
               }
 
-              <Link to="/wishlistPage">  <li><a href="/"> <i className="fas fa-heart" /></a></li></Link>
+              <Link to="/wishlistPage">  <li><div href="/"> <i className="fas fa-heart" /></div></li></Link>
 
-              <Link to="/cartPage"> <li><a href="/"><i className="fas fa-shopping-bag" /></a></li> </Link>
+              <Link to="/cartPage"> <li><div><i className="fas fa-shopping-bag" /></div></li> </Link>
 
             </ul>
           </nav>
