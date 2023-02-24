@@ -6,7 +6,7 @@ function CartPage() {
   return (
     <>
     <Navbar />
-    <main class="cart-page">
+    <main className="cart-page">
         <CartItems />
         <PriceTable />
     </main>

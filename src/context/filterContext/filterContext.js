@@ -216,7 +216,6 @@ const FilterProvider = ({
                     setIsDataFilteredByPrice({
                         isFiltered: false
                     });
-                    console.log("all price unchecked")
                     newState2 = [...data];
                 }
 

@@ -12,7 +12,7 @@ const WishlistProvider = ({ children }) => {
     try {
       const response = await axios.delete(`/api/user/wishlist/${product._id}`, {
         headers: {
-          authorization: encodedToken,
+          authorization: localStorage.getItem("token"),
         },
       });
       setWishListItems(response.data.wishlist);
@@ -33,7 +33,7 @@ const WishlistProvider = ({ children }) => {
           { product: product },
           {
             headers: {
-              authorization: encodedToken,
+              authorization: localStorage.getItem("token"),
             },
           }
         );

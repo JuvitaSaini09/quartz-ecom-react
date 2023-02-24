@@ -24,7 +24,6 @@ const CartProvider = ({ children }) => {
             },
           }
         );
-        console.log("here is the response",response.data)
         setCartItems(response.data.cart);
       } catch (error) {
         if (error.response.status === 500) {

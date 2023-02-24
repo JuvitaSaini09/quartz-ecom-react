@@ -1,6 +1,5 @@
 import React from 'react'
 import { useFilter } from '../../context/filterContext/filterContext';
-import { v4 as uuidv4 } from 'uuid';
 
 function CategoryFilter() {
     const {dispatch,setCheckedList, categoriesChecked}=useFilter();
@@ -26,7 +25,7 @@ function CategoryFilter() {
       categoriesChecked.map(({ name }) => {
         return (
           
-          <div key={uuidv4()}>
+          <div>
           <input type="checkbox" className="category" id={name} name={name}  onChange={(event) => {
                 clickHandler(event, name);
                 dispatch({ type: "checkBox" });

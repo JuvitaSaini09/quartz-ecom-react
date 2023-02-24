@@ -1,5 +1,4 @@
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid';
 import { useFilter,priceRangeData } from '../../context/filterContext/filterContext';
 
 function PriceFilter() {
@@ -27,7 +26,8 @@ function PriceFilter() {
       {
       priceRangeData.map(({ name }) => {
         return (
-          <div key={uuidv4()}>
+          
+          <div>
           <input type="checkbox" className="category" id={name} name={name}  onChange={(event) => {
                 priceRangeClickHandler(event, name);
                 dispatch({ type: "priceRange" });
