@@ -31,11 +31,13 @@ const AuthProvider=({children})=>{
       };
 
     const login=async (email,password)=>{
+      consnole.log(email,password)
         try {
-            const { data } = await axios.post(`/api/auth/login`, {
+            const { data } = await axios.post("/api/auth/login", {
                 "email":email,
                 "password":password,
               });
+              
               // saving the encodedToken in the localStorage
               localStorage.setItem("token",data.encodedToken);
               // saving the user in the localStorage
