@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { useCart } from "../../context/cartContext/cartContext";
 import { useFilter } from "../../context/filterContext/filterContext";
@@ -6,40 +5,8 @@ import { useWishlist } from "../../context/wishlistContext/wishlistContext";
 
 function ProductListing() {
   const { state } = useFilter();
-  const { cartItems, setCartItems } = useCart();
-  const { dispatchWishList } = useWishlist();
-  const encodedToken = localStorage.getItem("token");
-
-  const addItemToCart = async (product) => {
-    const isItemAlreadyInCart = cartItems.find((cartItem) => {
-      return product._id === cartItem._id;
-    });
-
-    if (isItemAlreadyInCart === undefined) {
-      try {
-        const response = await axios.post(
-          "/api/user/cart",
-          { product: product },
-          {
-            headers: {
-              authorization: encodedToken,
-            },
-          }
-        );
-        setCartItems(response.data.cart);
-        // saving the encodedToken in the localStorage
-      } catch (error) {
-        if (error.response.status === 500) {
-          alert("Please login to add to cart");
-        }
-        console.log(error);
-      }
-    } else {
-      alert("this item is already in the cart");
-    }
-  };
-
-
+  const { addItemToCart } = useCart();
+  const { addToWishList } = useWishlist();
 
   return (
     <section className="product-page" style={{ marginTop: 3 + "rem" }}>
@@ -58,7 +25,7 @@ function ProductListing() {
                 <button className="heart-badge ">
                   <span
                     onClick={() => {
-                      dispatchWishList({ type: "ADD_TO_WISHLIST", book: item });
+                      addToWishList(item);
                     }}
                   >
                     <i className="fas fa-heart fa-2x"></i>

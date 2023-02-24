@@ -5,7 +5,7 @@ import { useWishlist } from "../../context/wishlistContext/wishlistContext";
 
 function CartItems() {
   const { cartItems, setCartItems } = useCart();
-  const { dispatchWishList } = useWishlist();
+  const { addToWishList } = useWishlist();
   const encodedToken = localStorage.getItem("token");
   axios.defaults.headers.common["authorization"] = encodedToken;
 
@@ -125,12 +125,7 @@ function CartItems() {
                       <br />
                       <button
                         className="btn-cart"
-                        onClick={() => {
-                          dispatchWishList({
-                            type: "ADD_TO_WISHLIST",
-                            book: item,
-                          });
-                        }}
+                        onClick={() => addToWishList(item)}
                       >
                         Add to wishlist
                       </button>
