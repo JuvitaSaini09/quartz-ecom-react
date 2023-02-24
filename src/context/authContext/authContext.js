@@ -36,7 +36,7 @@ const AuthProvider=({children})=>{
                 "email":email,
                 "password":password,
               });
-              
+              console.log("here is the logged in data",data);
               // saving the encodedToken in the localStorage
               localStorage.setItem("token",data.encodedToken);
               // saving the user in the localStorage
