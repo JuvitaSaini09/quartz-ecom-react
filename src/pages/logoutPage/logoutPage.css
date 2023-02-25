@@ -3,7 +3,7 @@
 .login-page-container{
     padding:3rem;
     background-color: var(--white);
-    
+    background-color: rgb(253, 152, 152);
 }
 
 .login-page-container h1{
@@ -16,9 +16,13 @@
 }
 
 .login-page-container{
-    height:20rem;
+    height:30rem;
 }
 
 .login-bottom a{
     color:white;
+}
+
+.text-input{
+    width:20rem;
 }

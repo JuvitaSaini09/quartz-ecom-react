@@ -9,6 +9,7 @@
    margin:10rem 25% 4rem 25%;
     border:2px solid var(--grey-light);
     background-color: rgb(248, 245, 245);
+
 }
 
 .login-page-container h1{
@@ -46,16 +47,12 @@
 
 .login-icon{
     position: absolute;
-    top:2.8rem;
+    top:2.5rem;
     right:1.5rem;
 }
 
-@media screen and (max-width:980px) {
-    .login-page-container{
-        width:30rem;
-    }
-}
 
+/* 
 @media screen and (max-width:780px) {
     .login-page-container{
         width:25rem;
@@ -68,4 +65,17 @@
     .login-page-container{
         margin-top:8rem;
     }
+} */
+
+@media screen and (max-width:780px) {
+    .login-page-container{
+    margin:10rem auto;
+    }
 }
+
+@media screen and (max-width:650px) {
+    .login-page-container{
+        width:32rem;
+    }
+    
+} 
