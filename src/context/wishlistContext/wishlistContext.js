@@ -45,7 +45,7 @@ const WishlistProvider = ({ children }) => {
         console.log(error);
       }
     } else {
-      alert("this item is already in the wishlist");
+        removeFromWishList(product);
     }
   };
 

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function FeaturedCategories() {
   const [data,setData]=useState([]);
   const { addItemToCart }=useCart();
-  const {addToWishList}=useWishlist();
+  const {addToWishList,wishListItems}=useWishlist();
 
   useEffect(() => {
     async function fetchData() {
@@ -48,7 +48,8 @@ function FeaturedCategories() {
      <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
-       <button className="heart-badge "><span onClick={()=>addToWishList(item)}  ><i className="fas fa-heart fa-2x"></i></span></button>
+       <button className="heart-badge "><span onClick={()=>addToWishList(item)}  ><i  className={ wishListItems.find(wishListItem=>  item._id === wishListItem._id ) ? 'fas fa-heart fa-2x redColor' : "fas fa-heart fa-2x"}
+         ></i></span></button>
        <Link to="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">
@@ -86,7 +87,7 @@ newArrivalProducts.map(item=>{
      <div key={item._id} className="card-featured">
    <div className="card6 card">
      <div className="card-badge">
-       <button className="heart-badge "><span onClick={()=>addToWishList(item)} ><i className="fas fa-heart fa-2x"></i></span></button>
+       <button className="heart-badge "><span onClick={()=>addToWishList(item)} ><i className={ wishListItems.find(wishListItem=>  item._id === wishListItem._id ) ? 'fas fa-heart fa-2x redColor' : "fas fa-heart fa-2x"}></i></span></button>
        <Link to="/">
          <img className="card-image" alt="card" src={item.src} />
          <div className="card-text card6-text">

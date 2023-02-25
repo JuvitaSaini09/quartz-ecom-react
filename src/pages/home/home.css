@@ -120,7 +120,7 @@ footer{
 
 
 .feature-categories{
-    margin:3rem 5rem;
+    margin:7rem 5rem;
 }
 .feature-container{
     display:flex;
@@ -162,6 +162,10 @@ footer{
 }
 .btn-cart:hover{
     background-color: var(--pink-primary1);
+}
+
+.redColor{
+    color:red;
 }
 
 @media only screen and (max-width:1300px){
