@@ -15,7 +15,7 @@ function HeroSection() {
                     <p>Learning is the way <br /> to get succeed.<br />Grow more with the books.</p>
                     <div style={{ color: 'white' }} >
                         <Link to="/ProductPage">
-                             <button className="btn-explore">Explore | &gt;</button>
+                             <button className="btn-explore">Explore <i className="fas fa-arrow-right"></i></button>
                         </Link>
                     </div>
                 </section>
