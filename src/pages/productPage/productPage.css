@@ -121,6 +121,13 @@ input[type=radio], input[type=checkbox]{
     cursor:pointer;
 }
 
+
+.card-featured .redColor{
+    color:red;
+}
+.card-featured .redColor:hover{
+    color:red;
+}
 @media only screen and (max-width:700px){
     .main-body{
         margin-top:7.2rem;

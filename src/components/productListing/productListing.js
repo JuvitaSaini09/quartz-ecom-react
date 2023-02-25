@@ -7,7 +7,7 @@ import { useWishlist } from "../../context/wishlistContext/wishlistContext";
 function ProductListing() {
   const { state } = useFilter();
   const { addItemToCart } = useCart();
-  const { addToWishList } = useWishlist();
+  const { addToWishList,wishListItems } = useWishlist();
 
   return (
     <section className="product-page" style={{ marginTop: 3 + "rem" }}>
@@ -29,7 +29,7 @@ function ProductListing() {
                       addToWishList(item);
                     }}
                   >
-                    <i className="fas fa-heart fa-2x"></i>
+                    <i className={ wishListItems.find(wishListItem=>  item._id === wishListItem._id ) ? 'fas fa-heart fa-2x redColor' : "fas fa-heart fa-2x"}></i>
                   </span>
                 </button>
                 <Link to="/">
